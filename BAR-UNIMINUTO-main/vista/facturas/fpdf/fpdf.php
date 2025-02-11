@@ -104,14 +104,12 @@ function FPDF($orientation='P', $unit='mm', $size='A4')
 	// Font path
 	if(defined('FPDF_FONTPATH'))
 	{
-		$this->fontpath = FPDF_FONTPATH;
-		if(substr($this->fontpath,-1)!='/' && substr($this->fontpath,-1)!='\\')
-			$this->fontpath .= '/';
+		$size = $this->_getpagesize($size);
+		if (!$size) {
+    	$this->Error('Error: el tamaño de la página no se pudo determinar.');
 	}
-	elseif(is_dir(dirname(__FILE__).'/font'))
-		$this->fontpath = dirname(__FILE__).'/font/';
-	else
-		$this->fontpath = '';
+	$this->DefPageSize = $size;
+	$this->CurPageSize = $size;
 	// Core fonts
 	$this->CoreFonts = array('courier', 'helvetica', 'times', 'symbol', 'zapfdingbats');
 	// Scale factor
@@ -1790,15 +1788,17 @@ function _enddoc()
 	$this->_out($o);
 	$this->_out('%%EOF');
 	$this->state = 3;
-}
-// End of class
-}
+	}
+	// End of class
 
-// Handle special IE contype request
-if(isset($_SERVER['HTTP_USER_AGENT']) && $_SERVER['HTTP_USER_AGENT']=='contype')
-{
-	header('Content-Type: application/pdf');
-	exit;
-}
+	// Handle special IE contype request
+	if(isset($_SERVER['HTTP_USER_AGENT']) && $_SERVER['HTTP_USER_AGENT']=='contype')
+	{
+		header('Content-Type: application/pdf');
+		exit;
+	}
 
+	//  Elimina esta llave incorrecta
+	//  $pdf = new FPDF();}
+}
 ?>

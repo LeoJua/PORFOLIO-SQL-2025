@@ -9,7 +9,8 @@ class myDBC {
         $this->mysqli = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
  
         if ($this->mysqli->connect_errno) {
-            echo "Error MySQLi: ("&nbsp. $this->mysqli->connect_errno.") " . $this->mysqli->connect_error;
+            echo "Error MySQLi: (" . "&nbsp;" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error;
+
             exit();
         }
         $this->mysqli->set_charset("utf8");

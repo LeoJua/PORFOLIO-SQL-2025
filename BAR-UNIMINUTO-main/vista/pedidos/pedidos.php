@@ -19,8 +19,8 @@ if (@!$_SESSION['nombre']) {
 	<?php
 	///// CONEXION A LA BASE DE DATOS /////////
 	$usuario='root';
-  $contraseña='';
-  $host='localhost:33065';
+  $contraseña='12345';
+  $host='localhost:3306';
   $base='technology_dunk';
 
 	try {
@@ -56,11 +56,6 @@ if (@!$_SESSION['nombre']) {
 </head>
 
 <body >
-
-    <div class="brand">MEATS AND WINES</div>
-    <div class="address-bar">Cra. 26 #521, Bogotá</div>
-
-
     <nav class="navbar navbar-default" role="navigation">
 
     <div class="container-fluid">
@@ -73,7 +68,7 @@ if (@!$_SESSION['nombre']) {
                 <span class="icon-bar"> </span>
             </button>
 
-            <a class="navbar-brand" href="index.php">MEATS AND WINES</a>
+            
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -111,7 +106,7 @@ if (@!$_SESSION['nombre']) {
                 </li>
 
                 <li>
-                  <a href="../Reportes/reportes">
+                  <a href="../Reportes/reportes.php">
                   <span class="glyphicon glyphicon-signal"></a>
                 </li>
 
@@ -159,11 +154,10 @@ if (@!$_SESSION['nombre']) {
 
         	<?php
 
-				$query="SELECT com.Id,re.Documento, com.numeroventa, com.fecha, com.hora, com.id_producto, com.precio, com.cantidad, com.subtotal
-
-					   FROM compras  com
-					   INNER JOIN registro  re ON re.codigo= com.id_usuario GROUP BY numeroventa DESC
-					   ";
+				$query="SELECT com.Id, re.Documento, com.numeroventa, com.fecha, com.hora, com.id_producto, com.precio, com.cantidad, com.subtotal 
+        FROM compras com 
+        INNER JOIN registro re ON re.codigo = com.id_usuario 
+        GROUP BY numeroventa, com.Id, re.Documento, com.numeroventa, com.fecha, com.hora, com.id_producto, com.precio, com.cantidad, com.subtotal;";
 				$consulta=$conexion->query($query);
 				$a=1;
 				while ($fila=$consulta->fetch(PDO::FETCH_ASSOC))

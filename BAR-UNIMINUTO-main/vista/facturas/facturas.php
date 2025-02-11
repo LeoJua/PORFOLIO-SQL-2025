@@ -20,8 +20,8 @@ if (@!$_SESSION['nombre']) {
   <?php
 	///// CONEXION A LA BASE DE DATOS /////////
 	$usuario='root';
-  $contraseña='';
-  $host='localhost:33065';
+  $contraseña='12345';
+  $host='localhost:3306';
   $base='technology_dunk';
 
 	try {
