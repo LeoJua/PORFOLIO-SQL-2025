@@ -99,7 +99,7 @@ if (@!$_SESSION['nombre']) {
 
 					extract($_GET);
 					if(@$codigoborrar==2){
-						$id=$_REQUEST[codigo];
+						$id=$_REQUEST['codigo'];
 					Mesa::cambiarEstado(0,$id);
 				}
 
@@ -108,7 +108,7 @@ if (@!$_SESSION['nombre']) {
 					extract($_GET);
 					if(@$codigohabilitar==2){
 
-						$id=$_REQUEST[codigo];
+						$id=$_REQUEST['codigo'];
 					Mesa::cambiarEstado(1,$id);
 		
 					

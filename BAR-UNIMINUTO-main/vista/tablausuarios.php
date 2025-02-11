@@ -104,7 +104,7 @@
 
 					extract($_GET);
 					if(@$codigoborrar==2){
-						$id=$_REQUEST[codigo];
+						$id=$_REQUEST['codigo'];
 					Usuario::cambiarEstado(0,$id);
 
 				}
@@ -113,7 +113,7 @@
 
 					extract($_GET);
 					if(@$codigoadmin==2){
-						$id=$_REQUEST[codigo];
+						$id=$_REQUEST['codigo'];
 					Usuario::cambiarEstado(1,$id);
 
 				}
@@ -122,7 +122,7 @@
 
 					extract($_GET);
 					if(@$codigousu==2){
-						$id=$_REQUEST[codigo];
+						$id=$_REQUEST['codigo'];
 					Usuario::cambiarEstado(2,$id);
 
 				}
