@@ -56,11 +56,6 @@ if (@!$_SESSION['nombre']) {
 </head> 
 
 <body >
-
-    <div class="brand">MEATS AND WINES</div>
-    <div class="address-bar">Cra. 26 #521, Bogotá</div>
-
-    
     <nav class="navbar navbar-default" role="navigation">
 
     <div class="container-fluid">

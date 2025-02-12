@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="#">
+<title>Andres Peluqueria - Barbershop</title>
+<!-- CSS -->
+
+
+</head>
+<body class="frontpage">
+
+<div id="loader-wrapper">
+<div id="loader"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+</div>
+
+
+<div class="menu-outer">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav>
+        <ul>
+           
+			<li><a href="Reservas.html">Reservas</a></li>
+			<li><a href="index.html">Inicio</a></li>
+           <li><a href="blog.html">Blog</a></li>
+		   <li><a href="Historia.html">Mi Historia</a></li>
+           <li><a target="_blank" href="https://www.wowthemes.net/themes/beauttio/">WP Version</a></li>
+       </ul>
+   </nav>
+</div>
+<a class="menu-close" onClick="return true">
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</a>
+
+<div class="fixedcallicon">
+	<i class="fa fa-phone"></i><span class="hide">Book Now - 897.645.223</span>
+</div>
+
+
+<link href="css/reservas.css" rel="stylesheet" type="text/css">
+
+
+
+<div class="container">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <header class="header">
+      <h1 id="title" class="h1">Reserva tu cita en Andres Barbershop!</h1> 
+        
+      <div class="reservation-form wow fadeInUp"></div>
+        <form action="php/reservation.php" id="reservationform" method="POST">
+        <div class="row">
+        <div class="col-md-4 col-sm-6">
+        <div class="form-group">      
+        <label for="name">Seleciona la fecha y hora</label>
+        <input type="datetime-local" name="date" class="form-control" id="datepicker" placeholder="Pick a date" title="Selecciona la fecha" required>
+        <i class="fa fa-calendar-o"></i>
+        </div>
+
+
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <div class="form-group">
+        <label for="name">Ingresa tu nombre</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" title="Your Full Name please"required>
+        <i class="fa fa-pencil-square-o"></i>
+        </div>
+
+        
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <div class="form-group">
+        <label for="email">Correo electronico</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" title="Please enter your email id"required>
+        <i class="fa fa-envelope-o"></i>
+        </div>
+
+
+ 
+       
+           
+        <div class="col-md-4 col-sm-6">
+       <div class ="form-group">
+        
+        <label for="speciality">Seleciona especialidad </label>
+            <select class="form-control" name="select">
+                <option value="value1">Selecione una</option>
+                <option value="value1">Corte</option>
+                <option value="value1">Barba</option>
+                <option value="value1">Cejas</option>
+                <option value="value2">Uñas</option>
+                <option value="value3">Tintura</option>
+                <option value="value3">Cepillado</option>
+            </select required>
+        </input>
+        </div>
+    
+        </div>
+
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <div class="form-group">
+        <label for="guests">Personas</label>
+        <input class="form-control" type="number" id="guests" name="guests" placeholder="Cantidad personas" title="Please enter number of guests"required>
+        <i class="fa fa-user"></i>
+         </div>
+        
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <div class="form-group">
+        <label for="phone">Numero telefonico</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number" title="Please enter your phone number" required>
+        <i class="fa fa-phone"></i>
+        </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="col-md-4 col-sm-6"></div>
+    <div class="submit">
+    
+        <label for="button" method="post">Listo? Dale click en enviar! </label>
+   
+    <input type="submit" class="submit-button" id="submit" name="submit" required>
+    <i class="submit"></i>
+    </div>
+       
+
+   
+
+       
+
+
+        
+
+        </div>
+        </div>
+        </div>
+        </form>
+        </div>
+       
+        </div>
+        </div>
+        </section>
+        
