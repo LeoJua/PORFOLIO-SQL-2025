@@ -1,4 +1,4 @@
-📂 PORTFOLIO-SQL-2025
+📂 PORTFOLIO 2025
 Welcome to my public repository, where you'll find a collection of projects and practices related to SQL, data analysis, and web development.
 
 🔍 What can you find here?
@@ -9,9 +9,12 @@ Sales Management System: Application with change control and data handling.
 Form Optimization Project: Automating form-filling processes.
 Web Applications with PHP and JavaScript: Implementations using HTML, CSS, and databases.
 Management and Control Systems: Projects focused on administration and process optimization.
+Each repository includes documentation explaining how the system works. In some cases, you'll also find videos demonstrating the functionality of the projects.
+
 📌 Technologies Used
 Databases: SQL, MySQL
 Programming Languages: JavaScript, PHP, Java
 Frontend: HTML, CSS
 Data Science: Jupyter Notebook
 This repository showcases my skills and experience in development and data analysis. Feel free to reach out if you have any questions or suggestions. 🚀
+
