@@ -1,4 +1,7 @@
 📂 PORTFOLIO 2025
+
+⚠️⚠️!!Always performing changes, so this space is always un updates.!!⚠️⚠️
+
 Welcome to my public repository, where you'll find a collection of projects and practices related to SQL, data analysis, and web development.
 
 🔍 What can you find here?
