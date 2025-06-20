@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas Frecuentes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="faq-section">
+    <h2 class="faq-title">Preguntas Frecuentes</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        ¿Qué tipo de bicicletas transportan?
+        <span class="arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        Transportamos bicicletas de ruta, montaña, gravel, urbanas y eléctricas. Usamos anclajes seguros y protectores en cada componente.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        ¿Debo estar presente para la recolección o entrega?
+        <span class="arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        No es obligatorio. Podemos coordinar con anticipación para recoger o entregar la bici en tu casa, taller o punto de encuentro.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        ¿Qué incluye el acompañamiento durante entrenamientos?
+        <span class="arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        Te acompañamos en moto o carro brindando soporte mecánico básico, hidratación, snacks y asistencia en caso de emergencias.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        ¿Cómo garantizan que mi bicicleta estará segura?
+        <span class="arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        Utilizamos anclajes y cubiertas protectoras diseñadas para proteger cada parte. Además, somos ciclistas y cuidamos cada bici como propia.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        ¿Cuánto cuesta el servicio?
+        <span class="arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        Desde $35.000/hora en moto o $42.000/hora en vehículo. Contáctanos por WhatsApp para cotizar según distancia y tipo de servicio.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headers = document.querySelectorAll('.accordion-header');
+
+      headers.forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.parentElement;
+          const isActive = item.classList.contains('active');
+          document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
