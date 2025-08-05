@@ -1,0 +1,73 @@
+🧠 Análisis de Ventas de E-commerce en Brasil usando PySpark y Power BI
+🧾 Objetivo del proyecto
+Explorar y analizar datos reales del e-commerce brasileño con el fin de:
+
+Identificar las categorías más vendidas
+
+Determinar los meses más fuertes en ventas por categoría
+
+Visualizar y comunicar estos insights de forma clara mediante un dashboard interactivo en Power BI
+
+🔍 1. Preparación y análisis de datos con PySpark en Google Colab
+📂 Dataset:
+Usamos el archivo olist_order_items_dataset.csv del repositorio de Kaggle.
+
+🔧 Pasos realizados en PySpark:
+Carga del dataset con Spark usando inferSchema=True y header=True.
+
+Conversión de fechas para extraer campos de año y mes (a partir del campo shipping_limit_date).
+
+Cálculo del campo total_sales como el producto de price y order_item_id.
+
+Agrupación de datos por product_category_name, year y month para obtener la suma total de ventas.
+
+Exportación del resumen a un archivo .csv para visualización posterior en Power BI.
+
+📊 2. Visualización con Power BI
+Una vez cargado el CSV exportado desde PySpark, se desarrolló un dashboard con los siguientes elementos:
+
+🔹 Slicer por categoría de producto
+Permite al usuario seleccionar una o varias categorías para analizar su comportamiento mensual.
+
+🔹 Slicer por año
+Facilita la comparación de ventas entre distintos años.
+
+🔹 Gráfico de columnas por mes
+Visualiza el comportamiento mensual de ventas para la(s) categoría(s) seleccionadas, permitiendo identificar los meses más fuertes en ventas.
+
+🔹 Gráfico de barras horizontales – Top 10 categorías más vendidas
+Muestra un ranking de las categorías con mayor volumen de ventas a nivel global, sin verse afectado por los slicers (usando medidas con ALL() para conservar la visión general).
+
+🔹 Tarjeta de ventas totales
+Resume de forma inmediata la suma total de ventas en todo el periodo analizado.
+
+🧰 Herramientas utilizadas
+PySpark (Apache Spark API): procesamiento distribuido de datos a gran escala
+
+Google Colab: entorno para ejecutar PySpark en la nube
+
+Kaggle Datasets: fuente del conjunto de datos de e-commerce en Brasil
+
+Power BI Desktop: visualización de datos e interacción con usuarios finales
+
+✅ Conclusiones
+El enfoque con PySpark permitió trabajar eficientemente con datos semiestructurados y preparar información agregada útil para análisis.
+
+Power BI facilitó la construcción de un tablero dinámico, interactivo y presentable.
+
+Se logró responder preguntas clave como:
+
+¿Cuáles son las categorías más rentables?
+
+¿Qué meses tienen mayor volumen de ventas por categoría?
+
+¿Cómo varían las ventas por año?
+
+💼 Valor profesional del proyecto
+Este proyecto demuestra tu capacidad para:
+
+Manipular grandes volúmenes de datos con PySpark
+
+Aplicar análisis de negocio usando herramientas modernas de BI
+
+Comunicar insights mediante dashboards interactivos
