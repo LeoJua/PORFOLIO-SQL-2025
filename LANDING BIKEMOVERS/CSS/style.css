@@ -49,75 +49,12 @@ img {
   padding: 0 20px;
 }
 
-/* Header con video optimizado */
-.main-header {
-  position: relative;
-  height: 100vh;
-  min-height: 500px;
-  overflow: hidden;
-  color: var(--white);
+/* Header */
+.header-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  background-color: #5a5a5a;
-}
-
-.header-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.8;
-  filter: grayscale(20%) contrast(110%);
-}
-
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.header-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.header-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.header-subtitle {
-  font-size: 1.4rem;
-  margin-bottom: 2.5rem;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: var(--accent);
-  color: var(--white);
-  padding: 15px 30px;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: var(--transition);
-  box-shadow: var(--box-shadow);
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+  align-items: center;
+  padding: 3rem 0;
 }
 
 /* Sección Quiénes Somos */
@@ -224,7 +161,6 @@ img {
   height: 24px;
 }
 
-
 /* Slideshow automático solo con CSS */
 .about-image.slideshow {
   position: relative;
@@ -274,7 +210,6 @@ img {
   17%  { opacity: 0; }
   100% { opacity: 0; }
 }
-
 
 /* Sección de Servicios */
 .services-section {
@@ -349,9 +284,9 @@ img {
 
 .process-step img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Hace la imagen cuadrada */
-  object-fit: cover;   /* Recorta la imagen para llenar el espacio */
-  max-width: 299px;    /* Tamaño cuadrado pequeño */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  max-width: 299px;
   margin: 0 auto 20px;
   display: block;
   border-radius: var(--border-radius);
@@ -686,23 +621,8 @@ img {
 
 @media (max-width: 768px) {
   .main-header {
-    height: 80vh;
-    min-height: 500px;
-  }
-  
-  /* Optimización para móviles - video más ligero */
-  .header-video {
-    /* Asegurar que el video se muestre correctamente en móviles */
-    display: block;
-    /* Posición alternativa para mejor rendimiento */
-    top: 0;
-    left: 0;
-    transform: none;
-    /* Tamaño optimizado para móviles */
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    height: 60vh;
+    min-height: 100px;
   }
   
   .header-content h1 {
@@ -845,7 +765,7 @@ img {
 /*baner carro con rack*/
 .differential-banner {
   background-color: #f2fdf6;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   text-align: center;
   border-top: 2px solid #25D366;
   border-bottom: 2px solid #25D366;
@@ -1068,18 +988,549 @@ body {
   margin: 0.5rem 0;
 }
 
-@media screen and (max-width: 600px) {
-  .pricing-table th,
-  .pricing-table td {
-    font-size: 0.85rem;
-    padding: 0.8rem;
-  }
+/* promociones */
+.promo-banner {
+  background-color: #e8f8ff;
+  border-left: 5px solid #007bff;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 59, 79, 0.1);
+}
 
-  .pricing-section .section-title {
+.promo-banner h2 {
+  font-size: 1.8rem;
+  color: #003b4f;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.promo-banner p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.promo-banner .cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.promo-banner .cta-button:hover {
+  background-color: #005bbd;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*reseñas */
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tarjeta-reseña {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.avatar {
+  background-color: #48bb78;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contenido-reseña {
+  flex: 1;
+}
+
+.detalle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.estrellas {
+  color: #f7c948;
+}
+
+.titulo {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.comentario {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+header {
+  margin-top: -50px;
+}
+
+/*blog */
+.blog-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  background-color: var(--secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+/*blog*/
+    .btn-flotante-volver {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #ffffff;
+      border: 1px solid #31a2de;
+      padding: 10px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .services-section {
+      padding: 40px 0;
+    }
+
+    .section-description {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /*tabla precios */
+    .pricing-table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.compact-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 300px;
+}
+
+.compact-pricing-table th,
+.compact-pricing-table td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.compact-pricing-table th {
+  background-color: #2e86ab;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.compact-pricing-table td {
+  vertical-align: top;
+}
+
+.compact-pricing-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.compact-pricing-table small {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.table-note {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .compact-pricing-table {
+    font-size: 0.85rem;
+  }
+  
+  .compact-pricing-table th,
+  .compact-pricing-table td {
+    padding: 0.5rem 0.6rem;
+  }
+} 
+/*comentarios */
+/* Contenedor principal centrado */
+.centered-testimonials-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor de reseñas */
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px; /* Ancho máximo para evitar que se expanda demasiado */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 15px; /* Espaciado lateral */
+}
+
+/* Tarjetas individuales */
+.tarjeta-reseña {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .reseñas-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+/* Para centrar los títulos */
+.centered-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reseñas-container {
+  margin-bottom: 40px; /* Añade espacio después del último elemento */
+}
+
+/*footer */
+/* Correcciones específicas (agregar esto al final de tu CSS) */
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+.footer-link:hover {
+  color: var(--accent); /* Usa tu color de acento */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Asegurar que los links sean clickeables */
+.footer-blog ul,
+.footer-social .social-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Responsive mínimo */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-blog ul {
+    margin-top: 0.5rem;
+  }
+}
+
+/* ==================== */
+/* VIDEO HERO RESPONSIVE */
+/* ==================== */
+.video-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 800px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.video-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.video-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Ajustes responsive */
+@media (max-width: 992px) {
+  .video-content h1 {
+    font-size: 2rem;
+  }
+  
+  .video-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-content {
+    width: 95%;
+  }
+  
+  .video-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-container {
+    padding-bottom: 75%; /* Relación más alta para móviles */
+  }
+  
+  .video-content h1 {
     font-size: 1.5rem;
   }
+  
+  .video-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+}
 
-  .pricing-section .section-description {
-    font-size: 0.95rem;
+/* Optimización para dispositivos móviles */
+@media (hover: none) {
+  .hero-video {
+    /* Estilos específicos para touch devices */
+  }
+}
+/* Espacio después del video */
+.video-container {
+    margin-bottom: 40px; /* Ajusta este valor según el espacio que desees */
+}
+
+/* ==================== */
+/* ESTILOS DEL BOTÓN WHATSAPP EN VIDEO HERO */
+/* ==================== */
+.video-content .cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #25D366; /* Verde de WhatsApp */
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.video-content .cta-button:hover {
+  background-color: #128C7E; /* Verde más oscuro al hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+}
+
+/* Efecto al hacer clic */
+.video-content .cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(37, 211, 102, 0.4);
+}
+
+/* Icono de WhatsApp (opcional) */
+.video-content .cta-button::before {
+  content: "";
+  display: inline-block;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M17.5 14c-.3 0-.5-.1-.7-.3l-1.1-1.1c-.2-.2-.5-.2-.7 0l-.5.5c-1.3-1-2.2-2.4-2.5-4H13c.3 0 .5-.2.5-.5v-1c0-.3-.2-.5-.5-.5h-2V7.5c0-.3-.2-.5-.5-.5h-1c-.3 0-.5.2-.5.5V9H7.5c-.3 0-.5.2-.5.5v1c0 .3.2.5.5.5h.6c-.1.8-.1 1.6.1 2.4.2 1.3.8 2.5 1.7 3.5l-2.4 2.4 7.1-2.4c1.2.7 2.6 1.1 4 1.1 4.1 0 7.5-3.4 7.5-7.5S21.6 6.5 17.5 6.5 10 9.9 10 14c0 1.6.5 3 1.3 4.2l-1.3 4.5 4.6-1.5c1.1.7 2.5 1.1 3.9 1.1 4.1 0 7.5-3.4 7.5-7.5S21.6 6.5 17.5 6.5z"/></svg>');
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .video-content .cta-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+  .video-content .cta-button::before {
+    width: 18px;
+    height: 18px;
   }
 }

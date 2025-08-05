@@ -3,34 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Servicio profesional de transporte y acompañamiento para ciclistas.">
-  <title>BikeMovers - Transporte y Acompañamiento para Ciclistas</title>
+  <!-- SEO mejorado -->
+  <meta name="description" content="Transporte seguro y acompañamiento motorizado para ciclistas en Bogotá. Lleva tu bici al taller o entrena con respaldo especializado.">
+  <meta name="keywords" content="transporte bicicletas Bogotá, acompañamiento ciclistas, llevar bicicleta al taller, servicio ciclistas Colombia">
+  <meta name="author" content="BikeMovers">
+  <link rel="canonical" href="https://www.bikemovers.xyz">
+
+  <title>Transporte para Ciclistas en Bogotá | BikeMovers</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="IMAGENES/favicon.png" type="image/png">
+  <link rel="icon" href="IMAGENES/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="IMAGENES/favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <header class="main-header">
-    <div class="header-overlay"></div>
-    <video autoplay muted loop playsinline class="header-video" preload="auto" poster="IMAGENES/video-poster.jpg">
-      <source src="IMAGENES/video transporte1.mp4" type="video/mp4">
-      <img src="IMAGENES/hero-bicicleta.jpg" alt="Servicio de transporte de bicicletas">
-    </video>
-    <div class="header-content">
-      <h1>¿Entrenar solo, con miedo o sin tiempo para el taller?</h1>
-      <p class="header-subtitle">Te acompañamos o la transportamos por ti. Servicios diseñados por ciclistas para ciclistas.</p>
-      <a href="https://wa.me/573001112233" class="cta-button" target="_blank">Escríbenos por WhatsApp</a>
-    </div>
 
-  </header>
+  <!-- Datos estructurados JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "BikeMovers",
+      "url": "https://www.bikemovers.xyz",
+      "logo": "https://www.bikemovers.xyz/IMAGENES/favicon.png",
+      "description": "Servicio especializado de transporte y acompañamiento para ciclistas en Bogotá.",
+      "areaServed": "Bogotá, Colombia",
+      "serviceType": "Transporte de bicicletas, acompañamiento en entrenamiento",
+      "founder": {
+        "@type": "Person",
+        "name": "Juan Leon"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+57 300 8215197",
+        "contactType": "customer service"
+      }
+    }
+  </script>
+</head>
+<body class="index-page"> <!-- Añadida clase para estilos específicos -->
+
+  <!-- SECCIÓN DEL VIDEO (NUEVO CONTENIDO) -->
+  <section class="video-hero">
+    <div class="video-container">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="IMAGENES/videolanding2.mp4" type="video/mp4">
+        <!-- Mensaje alternativo si el navegador no soporta video -->
+        Tu navegador no soporta videos HTML5
+      </video>
+      
+      <!-- Contenido superpuesto -->
+      <div class="video-content">
+        <h1>Transporte y acompañamiento para ciclistas</h1>
+        <p class="video-subtitle">Llevamos tu bici al taller o te acompañamos durante tus entrenamientos</p>
+        <a href="https://wa.me/573112130749" class="cta-button">Agendar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
   <section class="differential-banner">
     <div class="container">
       <div class="banner-content">
         <h2>¿Rodada en combo o bici al taller?</h2>
-        <p>Nos movemos contigo o la recogemos donde estés. Vehículo 4 puertas + rack trasero, cero enredos.</p>
+        <p>Nos movemos contigo o la recogemos donde estés.</p>
       </div>
     </div>
   </section>
@@ -51,6 +91,7 @@
             <h2 class="section-title">De ciclista a ciclista</h2>
             <p class="personal-message">Hola, soy <strong>Juan Leon</strong> y antes que emprendedor, soy un apasionado del ciclismo como tú.</p>
             <div class="cycling-experience">
+              <p>😟 <strong>Conozco el Miedo</strong> de salir solo a entrenar sin saber si alguien podrá ayudarme en una emergencia..</p>
               <p>🚴‍♂️ <strong>Conozco la frustración</strong> de tener que faltar al trabajo para llevar la bici al taller.</p>
               <p>🔧 <strong>He sentido la desconfianza</strong> de dejar mi bicicleta en manos de servicios que no entienden su valor.</p>
               <p>⏱️ <strong>Sé lo valioso</strong> que es tu tiempo entre entrenamientos y competencias.</p>
@@ -91,9 +132,19 @@
             <p>Con moto escolta te brindamos respaldo, asistencia y seguridad en entrenamientos, eventos o recorridos largos.</p>
           </div>
           <div class="service-card">
+            <img src="IMAGENES/camara.png" alt="Escolta" class="service-icon">
+            <h3>Registro Fotográfico</h3>
+            <p>Fotos y videos de tu ruta como tú los quieras. ¡Solo pedalea, nosotros capturamos el momento!.</p>
+          </div>
+          <div class="service-card">
+            <img src="IMAGENES/transmoto.png" alt="Escolta" class="service-icon">
+            <h3>Servicio de Transmoto</h3>
+            <p>¿Quieres entrenar distinto? Te ofrecemos transmoto para que lleves tu entrenamiento a otro nivel</p>
+          </div>
+          <div class="service-card">
             <img src="IMAGENES/botella.png" alt="Hidratación" class="service-icon">
             <h3>Soporte de Hidratación</h3>
-            <p>Agua fresca, snacks o preparación de bebidas. Apoyamos tu rendimiento donde lo necesites.</p>
+            <p>¿Te quedas sin agua? Nos adelantamos, recargamos y te la pasamos en el camino para que no tengas que parar de pedalear.</p>
           </div>
           <div class="service-card">
             <img src="IMAGENES/aire.png" alt="Asistencia mecánica" class="service-icon">
@@ -113,7 +164,7 @@
           <div class="service-card">
             <img src="IMAGENES/taller.png" alt="Entrega en taller" class="service-icon">
             <h3>Entrega en Taller</h3>
-            <p>Nos encargamos de todo. Coordinamos directamente con tu mecánico.</p>
+            <p>Nos encargamos de todo, llevamos tu bici al taller de tu preferencia.</p>
           </div>
           <div class="service-card">
             <img src="IMAGENES/auto.png" alt="Entrega en taller" class="service-icon">
@@ -124,144 +175,278 @@
       </div>
     </section>
 
-
-
- <section class="gallery-section">
-  <div class="container">
-    <h2 class="section-title">Así cuidamos tu bicicleta</h2>
-    <div class="process-gallery">
-      
-      <div class="process-step">
-        <img src="IMAGENES/ANCLAJES.png" alt="Protección de componentes">
-        <h3>1. Protección</h3>
-        <p>Cubrimos puntos críticos para evitar rozaduras durante el transporte</p>
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">Así cuidamos tu bicicleta</h2>
+        <div class="process-gallery">
+          <div class="process-step">
+            <img src="IMAGENES/ANCLAJES.png" alt="Protección de componentes">
+            <h3>1. Protección</h3>
+            <p>Cubrimos puntos críticos para evitar rozaduras durante el transporte</p>
+          </div>
+          <div class="process-step">
+            <img src="IMAGENES/seguridad.jpg" alt="Sujeción profesional">
+            <h3>2. Sujeción</h3>
+            <p>Anclajes especializados que evitan movimientos bruscos</p>
+          </div>
+          <div class="process-step">
+            <img src="IMAGENES/VEHICULO.jpg" alt="Transporte seguro">
+            <h3>3. Transporte</h3>
+            <p>Vehículo equipado con suspensión neumática para máximo cuidado</p>
+          </div>
+          <div class="process-step">
+            <img src="IMAGENES/carro+soporte.png" alt="Rack Porta Bicicletas">
+            <h3>4. Rack Porta Bicicletas</h3>
+            <p>Un sistema de transporte de bicis que se monta fácilmente en la puerta trasera. Sostiene hasta 3 bicicletas.</p>
+          </div>
+        </div>
       </div>
-      
-      <div class="process-step">
-        <img src="IMAGENES/seguridad.jpg" alt="Sujeción profesional">
-        <h3>2. Sujeción</h3>
-        <p>Anclajes especializados que evitan movimientos bruscos</p>
-      </div>
-      
-      <div class="process-step">
-        <img src="IMAGENES/VEHICULO.jpg" alt="Transporte seguro">
-        <h3>3. Transporte</h3>
-        <p>Vehículo equipado con suspensión neumática para máximo cuidado</p>
-      </div>
+    </section>
 
-      <div class="process-step">
-        <img src="IMAGENES/carro+soporte.png" alt="Rack Porta Bicicletas">
-        <h3>4. Rack Porta Bicicletas</h3>
-        <p>Un sistema de transporte de bicis que se monta fácilmente en la puerta trasera. Sostiene hasta 3 bicicletas.</p>
+    <section class="promo-banner">
+      <div class="container">
+        <h2>🎉 ¡El primer servicio va por cuenta nuestra!</h2>
+        <p>Queremos que vivas la experiencia BikeMovers sin preocupaciones. Contactanos y tu primer transporte o acompañamiento es totalmente GRATIS.</p>
+        <p>🚴‍♂️ Además, después de 5 servicios te damos un acompañamiento de cortesía para tu siguiente entrenamiento o competencia.</p>
+        <a href="https://wa.me/573001112233?text=Hola%2C%20quiero%20registrarme%20para%20mi%20primer%20servicio%20gratuito%20con%20BikeMovers" class="cta-button" target="_blank">¡Agéndalo ahora!</a>
       </div>
-
-    </div>
-  </div>
-</section>
-
+    </section>
     
-   <section class="pricing-section">
-  <div class="container">
-    <h2 class="section-title">Tarifas Rápidas</h2>
-    <p class="section-description">Precios base por tipo de servicio. Simples, sin rodeos.</p>
-
-    <table class="pricing-table">
-      <thead>
-        <tr>
-          <th>Servicio</th>
-          <th>Modalidad</th>
-          <th>Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Recolección al taller</td>
-          <td>Moto</td>
-          <td>$28.000 (ida y vuelta)</td>
-        </tr>
-        <tr>
-          <td>Recolección al taller</td>
-          <td>Carro</td>
-          <td>$38.000 (ida y vuelta)</td>
-        </tr>
-        <tr>
-          <td>Acompañamiento</td>
-          <td>Moto</td>
-          <td>$35.000 / hora</td>
-        </tr>
-        <tr>
-          <td>Acompañamiento</td>
-          <td>Carro</td>
-          <td>$65.000 / hora</td>
-        </tr>
-        <tr>
-          <td>Paquete largo</td>
-          <td>3+ horas</td>
-          <td>Precio especial</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p class="pricing-note">* Peajes fuera de Bogotá no están incluidos. Servicios en carro están sujetos a pico y placa.</p>
-  </div>
-</section> 
-
-
-    
-  <section class="faq-section">
-    <h2 class="faq-title">Preguntas Frecuentes</h2>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        ¿Qué tipo de bicicletas transportan?
-        <span class="arrow">+</span>
-      </button>
-      <div class="accordion-body">
-        Transportamos bicicletas de ruta, montaña, gravel, urbanas y eléctricas. Usamos anclajes seguros y protectores en cada componente.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        ¿Debo estar presente para la recolección o entrega?
-        <span class="arrow">+</span>
-      </button>
-      <div class="accordion-body">
-        No es obligatorio. Podemos coordinar con anticipación para recoger o entregar la bici en tu casa, taller o punto de encuentro.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        ¿Qué incluye el acompañamiento durante entrenamientos?
-        <span class="arrow">+</span>
-      </button>
-      <div class="accordion-body">
-        Te acompañamos en moto o carro brindando soporte mecánico básico, hidratación, snacks y asistencia en caso de emergencias.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        ¿Cómo garantizan que mi bicicleta estará segura?
-        <span class="arrow">+</span>
-      </button>
-      <div class="accordion-body">
-        Utilizamos anclajes y cubiertas protectoras diseñadas para proteger cada parte. Además, somos ciclistas y cuidamos cada bici como propia.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        ¿Cuánto cuesta el servicio?
-        <span class="arrow">+</span>
-      </button>
-      <div class="accordion-body">
-  Desde <strong>$35.000/hora</strong> en moto o <strong>$65.000/hora</strong> en vehículo.  
-  Consulta la <a href="#precios">tabla de precios</a> o contáctanos por WhatsApp para una cotización según tu necesidad y distancia.
+    <div class="pricing-table-container">
+  <table class="compact-pricing-table">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Modalidad</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Recolección al taller</td>
+        <td>Moto</td>
+        <td>$25.000<br><small>(ida y vuelta)</small></td>
+      </tr>
+      <tr>
+        <td>Recolección al taller</td>
+        <td>Carro</td>
+        <td>$35.650<br><small>(ida y vuelta)</small></td>
+      </tr>
+      <tr>
+        <td>Acompañamiento</td>
+        <td>Moto</td>
+        <td>$21.900/hora</td>
+      </tr>
+      <tr>
+        <td>Acompañamiento</td>
+        <td>Carro</td>
+        <td>$45.900/hora</td>
+      </tr>
+      <tr>
+        <td>Paquete largo</td>
+        <td>3+ horas</td>
+        <td>Precio especial</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="table-note">* Peajes fuera de Bogotá no incluidos. Servicios en carro sujetos a pico y placa.</p>
 </div>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Preguntas Frecuentes</h2>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ¿Qué tipo de bicicletas transportan?
+            <span class="arrow">+</span>
+          </button>
+          <div class="accordion-body">
+            Transportamos bicicletas de ruta, montaña, gravel, urbanas y eléctricas. Usamos anclajes seguros y protectores en cada componente.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ¿Debo estar presente para la recolección o entrega?
+            <span class="arrow">+</span>
+          </button>
+          <div class="accordion-body">
+            No es obligatorio. Podemos coordinar con anticipación para recoger o entregar la bici en tu casa, taller o punto de encuentro.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ¿Qué incluye el acompañamiento durante entrenamientos?
+            <span class="arrow">+</span>
+          </button>
+          <div class="accordion-body">
+            Te acompañamos en moto o carro brindando soporte mecánico básico, hidratación, snacks, asistencia en caso de emergencias y registro en video y fotos si lo deseas.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ¿Cómo garantizan que mi bicicleta estará segura?
+            <span class="arrow">+</span>
+          </button>
+          <div class="accordion-body">
+            Utilizamos anclajes y cubiertas protectoras diseñadas para proteger cada parte. Además, somos ciclistas y cuidamos cada bici como propia.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ¿Cuánto cuesta el servicio?
+            <span class="arrow">+</span>
+          </button>
+          <div class="accordion-body">
+            Desde <strong>$21.900/hora</strong> en moto o <strong>$45.900/hora</strong> en vehículo.  
+            Consulta la <a href="#precios">tabla de precios</a> o contáctanos por WhatsApp para una cotización según tu necesidad y distancia.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title centered-title">¿Ya usaste nuestro servicio?</h2>
+        <p class="section-description">Queremos escuchar tu experiencia. Muy pronto verás aquí las reseñas de otros ciclistas como tú.</p>
+
+        <div class="no-testimonials">
+          <p>🚴‍♂️ ¡Tu opinión puede ser la primera!</p>
+          <a href="http://wa.me/573112130749" class="cta-button" target="_blank">Enviar reseña por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="reseñas-container">
+      <!-- 1 -->
+      <div class="tarjeta-reseña">
+        <div class="avatar">J</div>
+        <div class="contenido-reseña">
+          <div class="detalle">
+            <strong>Juan C.</strong>
+            <span class="estrellas">⭐⭐⭐⭐⭐</span>
+            <small>2025-Jul-06</small>
+          </div>
+          <p class="titulo">¡Excelente acompañamiento!</p>
+          <p class="comentario">
+            Me acompañaron a Patios, súper puntuales y atentos. Me sentí más seguro que nunca entrenando.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="tarjeta-reseña">
+        <div class="avatar">L</div>
+        <div class="contenido-reseña">
+          <div class="detalle">
+            <strong>Laura G.</strong>
+            <span class="estrellas">⭐⭐⭐⭐⭐</span>
+            <small>2025-Jul-05</small>
+          </div>
+          <p class="titulo">Servicio práctico</p>
+          <p class="comentario">
+            No tuve que moverme. Ellos llevaron mi bici al taller mientras trabajaba. ¡100% recomendado!
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="tarjeta-reseña">
+        <div class="avatar">M</div>
+        <div class="contenido-reseña">
+          <div class="detalle">
+            <strong>Mateo R.</strong>
+            <span class="estrellas">⭐⭐⭐</span>
+            <small>2025-Jul-04</small>
+          </div>
+          <p class="titulo">Buen servicio, pero puede mejorar</p>
+          <p class="comentario">
+            Me acompañaron bien, pero llegaron 10 minutos tarde. Igual cumplieron y el trato fue bueno.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="tarjeta-reseña">
+        <div class="avatar">D</div>
+        <div class="contenido-reseña">
+          <div class="detalle">
+            <strong>Diana S.</strong>
+            <span class="estrellas">⭐</span>
+            <small>2025-Jul-03</small>
+          </div>
+          <p class="titulo">No fue lo que esperaba</p>
+          <p class="comentario">
+            Cancelaron el servicio el mismo día por lluvia. Me hubiera gustado que ofrecieran otra solución.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="tarjeta-reseña">
+        <div class="avatar">F</div>
+        <div class="contenido-reseña">
+          <div class="detalle">
+            <strong>Felipe T.</strong>
+            <span class="estrellas">⭐⭐⭐⭐</span>
+            <small>2025-Jul-02</small>
+          </div>
+          <p class="titulo">Muy útil si entrenas solo</p>
+          <p class="comentario">
+            Me gustó la experiencia, sentí acompañamiento real y seguro. Solo que el costo es un poco alto.
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
+  </main>
+
+    <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <p>Transporte y acompañamiento para ciclistas</p>
+      </div>
+  <!-- Nueva sección de blog añadida -->
+    <div class="footer-blog">
+      <h3>Blog</h3>
+      <div class="footer-links">
+        <a href="BLOG/rutas.html" class="footer-link">
+          🚴‍♂️ Rutas ciclistas Bogotá
+        </a>
+      </div>
+    </div>
+
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <div class="social-icons-labeled">
+            <div class="social-icons-column">
+              <div class="social-link-vertical">
+                <span>Instagram @juang_leon</span>
+                <img src="IMAGENES/Instagram-logo-horizontal-full.png" alt="Instagram" />
+              </div>
+              <div class="social-link-vertical">
+                <span>Strava</span>
+                <img src="IMAGENES/STRAVA.png" alt="Strava" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2025 BikeMovers. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  
+  <a href="http://wa.me/573112130749" class="shopify-whatsapp" target="_blank">
+    <img src="IMAGENES/whatsapp.jpg" alt="WhatsApp">
+    <span class="label">Contáctame</span>
+  </a>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -277,61 +462,5 @@
       });
     });
   </script>
-
-    <section class="testimonials-section">
-  <div class="container">
-    <h2 class="section-title centered-title">¿Ya usaste nuestro servicio?</h2>
-    <p class="section-description">Queremos escuchar tu experiencia. Muy pronto verás aquí las reseñas de otros ciclistas como tú.</p>
-
-    <div class="no-testimonials">
-      <p>🚴‍♂️ ¡Tu opinión puede ser la primera!</p>
-      <a href="https://wa.me/573001112233?text=Hola%2C%20quiero%20compartir%20mi%20experiencia%20con%20BikeMovers" class="cta-button" target="_blank">Enviar reseña por WhatsApp</a>
-    </div>
-  </div>
-</section>
-  </main>
-
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <!--<img src="IMAGENES/transporte.png" alt="BikeMovers" class="footer-logo">-->
-          <p>Transporte y acompañamiento para ciclistas</p>
-        </div>
-       
-        <div class="footer-social">
-          <h3>Síguenos</h3>
-          <div class="social-icons">
-          <div class="social-icons-labeled">
-      
-<div class="social-icons-column">
-  <div class="social-link-vertical">
-    <span>Instagram @juang_leon</span>
-    <img src="IMAGENES/Instagram-logo-horizontal-full.png" alt="Instagram">
-  </div>
-
-  <div class="social-link-vertical">
-    <span>Strava</span>
-    <img src="IMAGENES/STRAVA.png" alt="Strava">
-  </div>
-</div>
-
-    
-      </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 BikeMovers. Todos los derechos reservados.</p>
-        <div class="legal-links">
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <a href="https://wa.me/573001112233" class="shopify-whatsapp" target="_blank">
-    <img src="IMAGENES/whatsapp.jpg" alt="WhatsApp">
-    <span class="label">Contáctame</span>
-  </a>
 </body>
 </html>
